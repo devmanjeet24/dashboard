@@ -77,7 +77,7 @@ import {
 } from "@/components/ui/drawer"
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
+  // DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
@@ -104,14 +104,14 @@ import {
 import {
   Tabs,
   TabsContent,
-  TabsList,
-  TabsTrigger,
+  // TabsList,
+  // TabsTrigger,
 } from "@/components/ui/tabs"
 import { SquarePen } from "lucide-react"
 
 export const schema = z.object({
   id: z.number(),
-  img: z.number(),
+  // img: z.number(),
   header: z.string(),
   type: z.string(),
   status: z.string(),

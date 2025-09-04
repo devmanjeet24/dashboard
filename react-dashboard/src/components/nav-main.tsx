@@ -1,6 +1,7 @@
-import { IconCirclePlusFilled, IconMail, type Icon } from "@tabler/icons-react"
+// import { IconCirclePlusFilled, IconMail, type Icon } from "@tabler/icons-react"
+import { type Icon } from "@tabler/icons-react"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import {
   SidebarGroup,
   SidebarGroupContent,
