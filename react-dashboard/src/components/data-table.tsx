@@ -26,7 +26,7 @@ import {
   IconChevronsRight,
   // IconCircleCheckFilled,
   IconDotsVertical,
-  IconGripVertical,
+  // IconGripVertical,
   // IconLayoutColumns,
   // IconLoader,
   // IconPlus,
@@ -122,24 +122,24 @@ export const schema = z.object({
 })
 
 // Create a separate component for the drag handle
-function DragHandle({ id }: { id: number }) {
-  const { attributes, listeners } = useSortable({
-    id,
-  })
+// function DragHandle({ id }: { id: number }) {
+//   const { attributes, listeners } = useSortable({
+//     id,
+//   })
 
-  return (
-    <Button
-      {...attributes}
-      {...listeners}
-      variant="ghost"
-      size="icon"
-      className="text-muted-foreground size-7 hover:bg-transparent"
-    >
-      <IconGripVertical className="text-muted-foreground size-3" />
-      <span className="sr-only">Drag to reorder</span>
-    </Button>
-  )
-}
+//   return (
+//     <Button
+//       {...attributes}
+//       {...listeners}
+//       variant="ghost"
+//       size="icon"
+//       className="text-muted-foreground size-7 hover:bg-transparent"
+//     >
+//       <IconGripVertical className="text-muted-foreground size-3" />
+//       <span className="sr-only">Drag to reorder</span>
+//     </Button>
+//   )
+// }
 
 const columns: ColumnDef<z.infer<typeof schema>>[] = [
   // {

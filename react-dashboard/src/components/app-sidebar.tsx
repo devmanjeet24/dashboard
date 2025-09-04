@@ -3,7 +3,7 @@ import {
   IconCamera,
   IconChartBar,
   // IconDashboard,
-  // IconDatabase,
+  IconDatabase,
   IconFileAi,
   IconFileDescription,
   // IconFileWord,
@@ -11,7 +11,7 @@ import {
   IconHelp,
   IconInnerShadowTop,
   // IconListDetails,
-  // IconReport,
+  IconReport,
   IconSearch,
   IconSettings,
   IconUsers,
@@ -30,7 +30,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { House, SquareCheck } from "lucide-react"
+// import { House, SquareCheck } from "lucide-react"
 
 const data = {
   user: {
@@ -42,12 +42,12 @@ const data = {
     {
       title: "Dashboard",
       url: "#",
-      icon: House,
+      icon: IconDatabase,
     },
     {
       title: "Lifecycle",
       url: "#",
-      icon: SquareCheck,
+      icon: IconReport,
     },
     {
       title: "Analytics",
