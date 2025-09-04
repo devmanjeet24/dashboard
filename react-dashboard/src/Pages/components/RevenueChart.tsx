@@ -57,6 +57,9 @@ import {
   ResponsiveContainer,
 } from "recharts"
 import MiniBarChart from "./SourceChart";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge"
+import { CalendarCheck } from "lucide-react";
 
 const data = [
   { month: "Jan", revenue: 2040, users: 2400 },
@@ -72,36 +75,57 @@ const MixedGraph = () => {
 
     <div className="grid grid-cols-3 gap-4">
 
-      <ResponsiveContainer width="100%" height={400} className="col-span-2">
-      <ComposedChart data={data} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-        <CartesianGrid stroke="#f5f5f5" />
-        <XAxis dataKey="month" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-
-        {/* Area Graph */}
-        <Area
-          type="monotone"
-          dataKey="revenue"
-          fill="blue"
-          stroke="#3b82f6"
-          fillOpacity={0.3}
-        />
-
-        {/* Bar Graph */}
-        <Bar dataKey="users" barSize={40} fill="blue" />
-      </ComposedChart>
-    </ResponsiveContainer>
 
 
+<Card className="p-4 col-span-2" >
+        <CardHeader className="border-b px-2 pb-2 leadpadd">
+          <CardTitle className="text-gray-600 text-sm flex items-center justify-between">
+            <p>Revenue Performance</p>
+            <div className="flex gap-5">
+              <p><span className="bg-[#3b82f6] h-[10px] w-[10px] inline-block mr-2"></span> Total Revenue</p>
+              <p><span className="bg-[#5acaca] h-[10px] w-[10px] inline-block mr-2"></span> Ava Deal Size</p>
+            </div>
+            <Badge variant="outline" className="text-[12px] text-[#5e5e5e] px-[10px] py-[4px]"><span className="ml-2 "><CalendarCheck className="size-{4}"/></span>Last updated: Feb 28, 2024 </Badge>
+            </CardTitle>
+        </CardHeader>
+        <CardContent className="px-0">
 
-    <MiniBarChart />
+          <ResponsiveContainer width="100%" height={400} >
+        <ComposedChart data={data} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+          <CartesianGrid stroke="#f5f5f5" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+
+          {/* Area Graph */}
+          <Area
+            type="monotone"
+            dataKey="revenue"
+            fill="blue"
+            stroke="#3b82f6"
+            fillOpacity={0.3}
+          />
+
+          {/* Bar Graph */}
+          <Bar dataKey="users" barSize={40} fill="blue" />
+        </ComposedChart>
+      </ResponsiveContainer>
+          
+        </CardContent>
+      </Card>
+
+
+      
+
+
+
+      <MiniBarChart />
 
 
     </div>
 
-    
+
   )
 }
 

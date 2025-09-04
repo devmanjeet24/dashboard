@@ -25,28 +25,28 @@ const ProgressBar = () => {
 
             <thead>
                 <tr>
-                    <th className="">Channel </th>
-                    <th>Metric </th>
-                    <th>Total </th>
+                    <th className="text-gray-300">Channel </th>
+                    <th className="text-gray-300">Metric </th>
+                    <th className="text-gray-300">Total </th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td>Websites</td>
-                    <td>35</td>
+                    <td className="text-gray-500">Websites</td>
+                    <td className="text-gray-500">35</td>
                     <td className="flex items-center"><span><ArrowUp className="text-green-600 size-4"/></span>+5.2%</td>
                 </tr>
 
                 <tr>
-                    <td>Email</td>
-                    <td>25</td>
+                    <td className="text-gray-500">Email</td>
+                    <td className="text-gray-500">25</td>
                     <td className="flex items-center"><span><ArrowDown className="text-red-600 size-4"/></span>+5.2%</td>
                 </tr>
 
                 <tr>
-                    <td>Social Media</td>
-                    <td>15</td>
+                    <td className="text-gray-500">Social Media</td>
+                    <td className="text-gray-500">15</td>
                     <td className="flex items-center"><span><ArrowUp className="text-green-600 size-4"/></span>+5.2%</td>
                 </tr>
             </tbody>

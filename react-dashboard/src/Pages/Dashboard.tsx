@@ -17,7 +17,7 @@ import data from "./data.json"
 import Cards from "./components/Cards"
 // import ConversionChart from "./components/ConversionChart"
 // import SourceChart from "./components/SourceChart"
-import RevenueChart from "./components/RevenueChart"
+// import RevenueChart from "./components/RevenueChart"
 import MixedGraph from "./components/RevenueChart"
 // import LeadsTable from "./components/LeadsTable"
 
@@ -34,25 +34,20 @@ const Dashboard = () => {
             <SidebarInset>
                 <SiteHeader />
 
-
-
-
-
-
+                <div className="p-5">
                     <Cards />
-                   
-             
-                <div className=" mt-4">
-                    {/* <RevenueChart /> */}
-                    <MixedGraph  />
+
+
+                    <div className=" mt-4">
+                        <MixedGraph />
+                    </div>
+                    <div className="mt-4">
+                        {/* <LeadsTable /> */}
+                        <DataTable data={data} />
+                    </div>
+
+
                 </div>
-                <div className="mt-4">
-                    {/* <LeadsTable /> */}
-                    <DataTable data={data} />
-                </div>
-
-
-
 
 
 
